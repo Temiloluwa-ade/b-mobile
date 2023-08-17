@@ -1,10 +1,17 @@
-import { View } from "react-native";
+import { View, Text, Video, Pressable } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
-import * as SplashScreen from "expo-splash-screen"
-
-SplashScreen.preventAutoHideAsync();
+import {
+  SafeAreaView,
+  SafeAreaProvider,
+  SafeAreaInsetsContext,
+  useSafeAreaInsets,
+  initialWindowMetrics,
+} from "react-native-safe-area-context";
+import * as SplashScreen from "expo-splash-screen";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Splash() {
+  const navigation = useNavigation();
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
@@ -22,14 +29,38 @@ export default function Splash() {
 
   const onLayoutRootView = useCallback(async () => {
     if (appIsReady) {
-      await SplashScreen.hideAsync
+      await SplashScreen.hideAsync;
     }
-  }, [appIsReady])
+  }, [appIsReady]);
 
   return (
-    <View onLayout={onLayoutRootView}>
+    <SafeAreaView className="h-full">
+      <View className="flex flex-col" onLayout={onLayoutRootView}>
+        <View className="h-[80%]">
+          <Text className="self-center text-blue-400 font-bold text-xl">
+            Welcome to Breew
+          </Text>
+        </View>
 
-    </View>
-  )
-
+        <View className="">
+          <Pressable
+            className="flex items-center justify-center text-center rounded-md"
+            onPress={() => navigation.navigate("Onboarding")}
+          >
+            <View className=" bg-green-300 rounded-md items-center w-[90%] mx-2 p-3">
+              <Text className="text-sm text-[#1B0D01]">Get Started</Text>
+            </View>
+          </Pressable>
+          <Pressable
+            className="mt-5 flex items-center justify-center text-center rounded-md"
+            onPress={() => navigation.navigate("Onboarding")}
+          >
+            <View className=" bg-white rounded-md border-[#163300] border items-center w-[90%] mx-2 p-3">
+              <Text className="text-sm text-[#1B0D01]">Sign In</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
 }
