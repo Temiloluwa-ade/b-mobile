@@ -33,7 +33,7 @@ const Login = () => {
                 Email address <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
-                placeholder="example@gmail.com"
+                placeholder="welcome@breew.finance"
                 className="mt-2 border border-[#E3E3E3] py-4 px-4 rounded-md"
               />
             </View>
