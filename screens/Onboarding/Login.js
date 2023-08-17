@@ -30,7 +30,7 @@ const Login = () => {
           <View className="mt-10 mx-6">
             <View>
               <Text className="text-sm">
-                Email address <Text className="text-[#FFC727]"> *</Text>
+                Email address <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
                 placeholder="example@gmail.com"
@@ -39,7 +39,7 @@ const Login = () => {
             </View>
             <View className="mt-6">
               <Text className="text-sm">
-                Password <Text className="text-[#FFC727]"> *</Text>
+                Password <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
                 placeholder="enter a password"
@@ -51,7 +51,7 @@ const Login = () => {
         <View className="mt-10">
           <Pressable
             className="flex items-center justify-center text-center rounded-md"
-            onPress={() => navigation.navigate("Onboarding")}
+            onPress={() => navigation.navigate("Login")}
           >
             <View className=" bg-[#163300] rounded-md items-center w-[90%] mx-2 p-3">
               <Text className="text-sm text-white">Sign in</Text>

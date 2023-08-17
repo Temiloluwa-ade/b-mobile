@@ -30,7 +30,7 @@ const Onboard = () => {
           <View className="mt-10 mx-6">
             <View>
               <Text className="text-sm">
-                Email address <Text className="text-[#FFC727]"> *</Text>
+                Email address <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
                 placeholder="example@gmail.com"
@@ -40,7 +40,7 @@ const Onboard = () => {
             <View className="flex-row space-x-4 items-center">
               <View className="mt-6">
                 <Text className="text-sm">
-                  First name <Text className="text-[#FFC727]"> *</Text>
+                  First name <Text className="text-[#EE2E31]"> *</Text>
                 </Text>
                 <TextInput
                   placeholder="enter first name"
@@ -49,7 +49,7 @@ const Onboard = () => {
               </View>
               <View className="mt-6">
                 <Text className="text-sm">
-                  Last name <Text className="text-[#FFC727]"> *</Text>
+                  Last name <Text className="text-[#EE2E31]"> *</Text>
                 </Text>
                 <TextInput
                   placeholder="enter last name"
@@ -59,7 +59,7 @@ const Onboard = () => {
             </View>
             <View className="mt-6">
               <Text className="text-sm">
-                Password <Text className="text-[#FFC727]"> *</Text>
+                Password <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
                 placeholder="enter a password"
@@ -68,7 +68,7 @@ const Onboard = () => {
             </View>
             <View className="mt-6">
               <Text className="text-sm">
-                Confirm password <Text className="text-[#FFC727]"> *</Text>
+                Confirm password <Text className="text-[#EE2E31]"> *</Text>
               </Text>
               <TextInput
                 placeholder="confirm your password"

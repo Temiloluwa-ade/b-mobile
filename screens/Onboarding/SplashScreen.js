@@ -37,7 +37,7 @@ export default function Splash() {
     <SafeAreaView className="h-full">
       <View className="flex flex-col" onLayout={onLayoutRootView}>
         <View className="h-[80%]">
-          <Text className="self-center text-blue-400 font-bold text-xl">
+          <Text className="self-center text-[#163300] font-bold text-xl">
             Welcome to Breew
           </Text>
         </View>
@@ -47,8 +47,8 @@ export default function Splash() {
             className="flex items-center justify-center text-center rounded-md"
             onPress={() => navigation.navigate("Onboarding")}
           >
-            <View className=" bg-green-300 rounded-md items-center w-[90%] mx-2 p-3">
-              <Text className="text-sm text-[#1B0D01]">Get Started</Text>
+            <View className=" bg-[#163300] rounded-md items-center w-[90%] mx-2 p-3">
+              <Text className="text-sm text-white font-semibold">Get Started</Text>
             </View>
           </Pressable>
           <Pressable
@@ -56,7 +56,7 @@ export default function Splash() {
             onPress={() => navigation.navigate("Onboarding")}
           >
             <View className=" bg-white rounded-md border-[#163300] border items-center w-[90%] mx-2 p-3">
-              <Text className="text-sm text-[#1B0D01]">Sign In</Text>
+              <Text className="text-sm font-semibold text-[#1B0D01]">Sign In</Text>
             </View>
           </Pressable>
         </View>
